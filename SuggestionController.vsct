@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable
+  xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">
+
+	<Commands package="guidSuggestionControllerPackage">
+
+		<Menus>
+			<Menu guid="guidSuggestionControllerCmdSet"
+			  id="SuggestionToolbar"
+			  type="Toolbar">
+				<Strings>
+					<CommandName>Suggestion Controller</CommandName>
+					<ButtonText>Suggestion Controller</ButtonText>
+				</Strings>
+			</Menu>
+		</Menus>
+
+		<Groups>
+			<Group guid="guidSuggestionControllerCmdSet"
+				   id="SuggestionToolbarGroup"
+				   priority="0x0000">
+				<Parent guid="guidSuggestionControllerCmdSet"
+						id="SuggestionToolbar"/>
+			</Group>
+		</Groups>
+
+		<Buttons>
+
+			<Button guid="guidSuggestionControllerCmdSet"
+					id="cmdidSuggestionsOff"
+					priority="0x0100"
+					type="Button">
+				<Parent guid="guidSuggestionControllerCmdSet"
+						id="SuggestionToolbarGroup"/>
+				<Strings>
+					<ButtonText>Suggestions OFF</ButtonText>
+					<CommandName>Suggestions OFF</CommandName>
+				</Strings>
+			</Button>
+
+			<Button guid="guidSuggestionControllerCmdSet"
+					id="cmdidSuggestionsOn"
+					priority="0x0200"
+					type="Button">
+				<Parent guid="guidSuggestionControllerCmdSet"
+						id="SuggestionToolbarGroup"/>
+				<Strings>
+					<ButtonText>Suggestions ON</ButtonText>
+					<CommandName>Suggestions ON</CommandName>
+				</Strings>
+			</Button>
+
+		</Buttons>
+	</Commands>
+
+	<Symbols>
+
+		<GuidSymbol name="guidSuggestionControllerPackage"
+					value="{f88467bc-fb00-4ddd-8225-cc21a0ec17e8}"/>
+
+		<GuidSymbol name="guidSuggestionControllerCmdSet"
+					value="{7A2C9F31-6B84-4D10-9E52-8F1B3A6C204D}">
+
+			<IDSymbol name="SuggestionToolbar" value="0x1000"/>
+			<IDSymbol name="SuggestionToolbarGroup" value="0x1020"/>
+			<IDSymbol name="cmdidSuggestionsOff" value="0x0100"/>
+			<IDSymbol name="cmdidSuggestionsOn" value="0x0101"/>
+
+		</GuidSymbol>
+
+	</Symbols>
+</CommandTable>
